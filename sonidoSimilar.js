@@ -49,7 +49,7 @@ class sonidoSimilar {
         palabraSonido = palabraSonido.replace(/(g)([eiéí])/gi, 'j$2');
         palabraSonido = palabraSonido.replace(/(^r|rr)/g, 'R');
         palabraSonido = palabraSonido.replace(/([lnsz])(r)/g, '$1R');
-        palabraSonido = palabraSonido.replace(/(y)/g, '$1i');
+        palabraSonido = palabraSonido.replace(/([aeiou])(y)/gi, '$1i');
         palabraSonido = palabraSonido.replace(/([bcdfgjklmnpqrstvwz])(y)/g, '$1i');
         if (this.settings.argentino) {
             palabraSonido = palabraSonido.replace(/ll/g, 'y');
