@@ -45,6 +45,9 @@ class sonidoSimilar {
     convertirSonido(palabra) {
         let palabraSonido = palabra;
         palabraSonido = this.replaceBulk(palabraSonido, "áéíóú".split(''), "AEIOU".split(''));
+        if (palabraSonido === 'y') {
+          palabraSonido = 'i';
+        }
         palabraSonido = palabraSonido.replace(/ch/g, 'Y');
         palabraSonido = palabraSonido.replace(/(g)([eiéí])/gi, 'j$2');
         palabraSonido = palabraSonido.replace(/(^r|rr)/g, 'R');
